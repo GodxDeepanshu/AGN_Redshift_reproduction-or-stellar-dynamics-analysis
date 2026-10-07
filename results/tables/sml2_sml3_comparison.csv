@@ -1,0 +1,9 @@
+Metric,Narendra et al. (2022),This Work (SML-III),Improvement
+Training Sample Size (N),"1,112 blazars","1,318 blazars",+18.5% sample expansion
+Uncalibrated Stacking R (linear z),0.7420,0.7950,+7.14% correlation increase
+Uncalibrated Stacking RMSE (linear z),0.4670,0.3998,14.39% error reduction
+Uncalibrated Stacking sigma_NMAD (linear z),0.1260,0.1322,Stable dispersion
+Bias-Corrected R (linear z),0.6780,0.8044,+18.64% relative correlation gain
+Bias-Corrected RMSE (linear z),0.5400,0.3900,27.78% error reduction
+Bias-Corrected sigma_NMAD (linear z),0.3100,0.1290,58.39% scatter reduction
+Catastrophic Outliers (eta_0.15),43.50%,29.11% (Dev) / 23.76% (BLL Lockbox),Substantial outlier containment

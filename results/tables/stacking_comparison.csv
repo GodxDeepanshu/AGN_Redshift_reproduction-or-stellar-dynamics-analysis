@@ -1,0 +1,6 @@
+Meta_Learner,Pearson_R,RMSE,NMAD,Selected
+RidgeCV,0.795,0.3998,0.1322,YES
+LassoCV,0.7932,0.4015,0.134,NO
+ElasticNetCV,0.7941,0.4008,0.1331,NO
+BayesianRidge,0.7948,0.4,0.1325,NO
+NNLS,0.7925,0.4028,0.1348,NO

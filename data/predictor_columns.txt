@@ -1,0 +1,12 @@
+LogFlux
+LogEnergy_Flux
+LogSignificance
+LogVariability_Index
+Lognu_syn
+LognuFnu_syn
+PL_Index
+LogPivot_Energy
+LP_Index
+LP_beta
+Gaia_G_Magnitude
+LabelNo

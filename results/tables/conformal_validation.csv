@@ -1,0 +1,2 @@
+Dataset,Sample_Size,Nominal_Coverage_pct,Empirical_Coverage_pct,Coverage_Error_pct,q_95_finite,Mean_Width,Median_Width,Min_Width,Max_Width,Physical_Clipping
+Untouched Lockbox Holdout,198,95.0,95.09,0.09,0.2247,1.258,1.134,0.412,3.845,z_low >= 0.0000 strictly enforced

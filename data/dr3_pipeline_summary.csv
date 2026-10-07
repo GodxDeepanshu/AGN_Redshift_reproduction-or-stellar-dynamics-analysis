@@ -1,0 +1,12 @@
+,Count
+Total DR3 AGNs,3814
+BLL + FSRQ,2250
+After quality cuts,2250
+After completeness,1713
+Training (z > 0),1303
+Training BLL,663
+Training FSRQ,640
+Generalization (no z),410
+New DR3 sources (total),77
+New DR3 in training,69
+New DR3 in generalization,8

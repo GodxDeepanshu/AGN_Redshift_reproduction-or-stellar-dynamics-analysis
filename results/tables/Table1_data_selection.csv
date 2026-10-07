@@ -1,0 +1,10 @@
+Filter / Selection Step,Fermi DR2 (SML-II),Fermi DR3 (SML-III),Change
+4LAC Catalog Total Detections,"3,130","3,814",+21.9%
+Class Filter (BLL and FSRQ only),"2,641","3,243",+22.8%
+Galactic Latitude Cut (|b| > 10 deg),"2,246","2,778",+23.7%
+Quality Boundary Cuts,"1,897","2,091",+10.2%
+Complete-Case Multi-Wavelength Matching,"1,565","1,728",+10.4%
+  - Confirmed Spectroscopic Training Sample,"1,112","1,318",+18.5%
+    * BL Lacertae Objects (BLL),575,670,+16.5%
+    * Flat-Spectrum Radio Quasars (FSRQ),537,648,+20.7%
+  - Range-Bounded Generalization Cohort (BLL),453,410,-9.5% (Bounded)
