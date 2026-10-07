@@ -1,16 +1,12 @@
 #!/usr/bin/env python3
 """
-AGN Redshift Project — Master Google Colab GPU Verification Script
+AGN Redshift Project — Full Reproduction and Verification Pipeline
 ==================================================================
-Fully verifies all results, sample sizes, models, calibrations, uncertainty
-quantifications, and tables published in the 16 September 2026 paper:
+Reproduces all empirical results, sample sizes, models, calibrations,
+conformal uncertainty quantifications, tables, and figures published in:
 
-"Bridging the Redshift Gap in the Fermi-LAT Catalog Using Supervised Machine Learning:
- A Leakage-Free Tabular Foundation Benchmark with Conformal Uncertainty"
+"Bridging the Redshift Gap in the Fermi-LAT Catalog Using Supervised Machine Learning"
 (Authors: Deepanshu Kushwaha & Raj Prince)
-
-Configured for high-speed execution on Google Colab with NVIDIA GPU (Tesla T4/V100/A100)
-and native TabPFN in-context foundation model.
 """
 
 import os
@@ -60,8 +56,7 @@ os.environ["TABPFN_ALLOW_CPU_LARGE_DATASET"] = "1"
 try:
     from tabpfn.browser_auth import save_token
     save_token(token)
-    print("TabPFN Authentication Token successfully cached in ~/.cache/tabpfn/auth_token")
-except Exception as e:
+except Exception:
     pass
 
 # 2. Directory Resolution
@@ -87,7 +82,7 @@ if PROJECT_DIR is None:
     raise FileNotFoundError("Could not find project directory with data/dr3_full_train.csv")
 
 DATA_DIR = PROJECT_DIR / "data"
-RESULTS_DIR = PROJECT_DIR / "verification_results"
+RESULTS_DIR = PROJECT_DIR / "results"
 TABLES_DIR = RESULTS_DIR / "tables"
 PREDS_DIR = RESULTS_DIR / "predictions"
 FIGS_DIR = RESULTS_DIR / "figures"

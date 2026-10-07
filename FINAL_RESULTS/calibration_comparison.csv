@@ -1,5 +1,0 @@
-Calibration,Pearson_R,RMSE,NMAD,Bias,Outlier_015_pct,Selected
-No_Calibration,0.795,0.3998,0.1322,-0.0699,31.52,NO
-Optimal_Transport,0.7812,0.412,0.1415,0.012,33.4,NO
-Spline_PCHIP,0.7985,0.3955,0.131,-0.041,30.8,NO
-Class_Conditional_Isotonic,0.8044,0.39,0.129,-0.065,29.11,YES

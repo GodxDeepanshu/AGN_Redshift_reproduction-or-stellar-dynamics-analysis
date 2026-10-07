@@ -34,9 +34,12 @@ Determining cosmological redshifts for Active Galactic Nuclei (AGNs)—specifica
 ├── README.md                                  # Comprehensive reviewer and reproduction guide
 ├── requirements.txt                           # Verified Python dependency specifications
 ├── .gitignore                                 # Git ignore rules for clean repository state
+├── requirements.txt                           # Verified Python dependency specifications
+├── .gitignore                                 # Git ignore rules for clean repository state
 ├── Paper_agn_tex.pdf                          # Camera-ready publication manuscript (27 pages)
-├── main.tex & updated.tex                     # Primary LaTeX manuscript sources
+├── main.tex                                   # Primary LaTeX manuscript source
 ├── aastex701.cls                              # Official AAS journals document class
+├── reproduce_results.py                       # Single-command Python reproduction script
 │
 ├── data/                                      # Master datasets & catalogs
 │   ├── dr3_full_train.csv                     # 1,318 complete-case spectroscopic training blazars
@@ -45,22 +48,16 @@ Determining cosmological redshifts for Active Galactic Nuclei (AGNs)—specifica
 │   ├── table-4LAC-DR3-h.fits                  # High-latitude 4LAC-DR3 master FITS catalog
 │   └── table-4LAC-DR3-l.fits                  # Low-latitude 4LAC-DR3 master FITS catalog
 │
-├── notebooks/                                 # Interactive verification notebooks
-│   └── AGN_Redshift_Colab_Verification.ipynb  # End-to-end reproducible Colab/Jupyter notebook
+├── notebooks/                                 # Interactive verification notebook
+│   └── AGN_Redshift_Reproduction.ipynb        # End-to-end reproducible Jupyter/Colab notebook
 │
-├── scripts/                                   # Execution scripts & pipeline modules
-│   ├── run_colab_verification.py              # CLI automated reproduction harness
-│   ├── run_pipeline_testing.py                # Comprehensive multi-model testing script
-│   └── pipeline/                              # Modular pipeline components
+├── figures/                                   # Camera-ready manuscript figures
+│   └── (All 18 publication figures & vector PDFs)
 │
-├── results/                                   # Publication figures, tables, and catalogs
-│   ├── DR3_BLL_photometric_redshift_catalog.csv # Complete 410-source generalization catalog
-│   ├── figures/                               # All 18 paper figures (PNG & vector PDF)
-│   └── tables/                                # All 9 paper tables (CSV & JSON metrics)
-│
-└── FINAL_RESULTS/                             # Canonical verified benchmark metrics & JSONs
-    ├── final_verified_metrics.json            # Ground-truth metric registry
-    └── lockbox_metrics_with_ci.csv            # Bootstrap 95% confidence intervals
+└── results/                                   # Full output artifacts, tables, and catalog
+    ├── DR3_BLL_photometric_redshift_catalog.csv # Complete 410-source generalization catalog
+    ├── figures/                               # Output figures (PNG & vector PDF)
+    └── tables/                                # Output tables (CSV & verified metrics JSON)
 ```
 
 ---
@@ -96,7 +93,7 @@ pip install -r requirements.txt
 ## 🔬 Step-by-Step Reproduction Guide
 
 ### Option A: Interactive Google Colab / Jupyter Notebook (Recommended)
-Open `notebooks/AGN_Redshift_Colab_Verification.ipynb` locally or upload to [Google Colab](https://colab.research.google.com/):
+Open `notebooks/AGN_Redshift_Reproduction.ipynb` locally or upload to [Google Colab](https://colab.research.google.com/):
 1. Select **Runtime -> Change runtime type -> T4 GPU**.
 2. Run all cells sequentially.
 3. The notebook will automatically:
@@ -109,7 +106,7 @@ Open `notebooks/AGN_Redshift_Colab_Verification.ipynb` locally or upload to [Goo
 ### Option B: Command-Line Interface (CLI)
 To run the automated verification suite directly from your terminal:
 ```bash
-python scripts/run_colab_verification.py
+python reproduce_results.py
 ```
 
 The script prints real-time assertions verifying that all sample sizes, correlation metrics, error values, coverage percentages, and physical bounds match the published manuscript.
