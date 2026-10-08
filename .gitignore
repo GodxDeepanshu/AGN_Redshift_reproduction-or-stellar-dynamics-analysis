@@ -7,6 +7,8 @@ __pycache__/
 old files/
 scratch/
 testing/
+catboost_info/
+
 
 # C extensions
 *.so
