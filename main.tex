@@ -1,4 +1,4 @@
-\documentclass[twocolumn,floatfix]{aastex701}
+\documentclass[twocolumn,linenumbers,floatfix]{aastex701}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -654,7 +654,7 @@ Finally, Figure~\ref{fig:width_hist} displays the distribution of the 95\% confo
 \end{minipage}
 \end{figure*}
 
-The calibrated generalization predictions, conformal bounds, and widths are saved in the final output catalog. Table~\ref{tab:predictions_catalog} in the Appendix presents the first 30 entries.
+The calibrated generalization predictions, conformal bounds, and widths are saved in the final output catalog. Table~\ref{tab:predictions_catalog} in the Appendix presents the first 12 entries.
 
 
 \section{Astrophysical Discussion and Methodological Synthesis}
@@ -760,7 +760,7 @@ The authors express sincere gratitude to Bundelkhand Institute of Engineering \&
 
 \appendix
 \section*{Appendix: Prediction Catalog and Model Diagnostics}
-Here we present Table~\ref{tab:predictions_catalog} containing the redshift predictions for the first 50 BLLs in the generalization set. The table lists the source name as assigned in the 4LAC catalog, the uncalibrated predicted redshift from our stacked ensemble, the calibrated (bias-corrected) predicted redshift, the lower and upper bounds of the 95\% conformal uncertainty interval, and the interval width. The predictions for the complete generalization set of 410 blazars can be found in the associated online data file.
+Here we present Table~\ref{tab:predictions_catalog} containing the redshift predictions for the first 12 BLLs in the generalization set. The table lists the source name as assigned in the 4LAC catalog, the uncalibrated predicted redshift from our stacked ensemble, the calibrated (bias-corrected) predicted redshift, the lower and upper bounds of the 95\% conformal uncertainty interval, and the interval width. The predictions for the complete generalization set of 410 blazars are available in full machine-readable format.
 
 \begin{table*}[t!]
 \centering
@@ -784,6 +784,7 @@ Here we present Table~\ref{tab:predictions_catalog} containing the redshift pred
     4FGL J0040.3+4050 & 0.2155 & 0.2123 & 0.0000 & 0.6486 & 0.6486 \\
 \hline
 \end{tabular}
+\tablecomments{This table is published in its entirety in machine-readable form. A portion is shown here for guidance regarding its form and content.}
 \end{table*}
 
 To evaluate the reliability of our stacking ensemble on the generalization set, we perform a joint analysis of the feature space data geometry and the predictive uncertainty. Specifically, we compare the multi-dimensional Mahalanobis distance ($D_M$), which serves as an out-of-distribution (OOD) profiling score, against the 95\% conformal prediction interval width ($W_{95} = z_{\text{high}, 95} - z_{\text{low}, 95}$). The Mahalanobis distance characterizes the geometric anomaly of each generalization blazar relative to the training centroid, accounting for covariance-based correlations between the 18 active predictors:
@@ -799,20 +800,17 @@ The observed weak correlation between geometric data density ($D_M$) and distrib
 
 Due to BLLs being the major category of AGNs present in the generalization set of the 4LAC catalog, we present in Figure~\ref{fig:stacked_ensemble_hist_bll} the distribution of predicted redshifts made from a stacked ensemble model trained exclusively on the BLLs of the training set ($670$ BLLs). We perform a Kolmogorov-Smirnov (KS) test to compare the distribution of the predicted redshifts of generalization samples of BLLs obtained from the model trained only on BLLs and the full stacking model. We conclude based on the KS test ($D = 0.0940$, $p = 0.0512$) that we cannot reject the null hypothesis that the two distributions are drawn from the same population at the standard 5\% significance level. Thus, we have stable results, which are resistant to the construction of the training sample, either with only BLLs or with the total 4LAC sample.
 
-\begin{figure*}[t]
+\begin{figure*}[!p]
 \centering
-\begin{minipage}{0.48\textwidth}
-\centering
-\includegraphics[width=0.95\linewidth,height=0.24\textheight,keepaspectratio]{figures/16_training_vs_generalization_distribution.png}
+\includegraphics[width=0.82\textwidth,height=0.42\textheight,keepaspectratio]{figures/16_training_vs_generalization_distribution.png}
 \caption{Distribution of the redshifts of the training data (red) and the predicted redshifts of the generalization set, from a stacked ensemble trained only on BLLs (turquoise).}
 \label{fig:stacked_ensemble_hist_bll}
-\end{minipage}\hfill
-\begin{minipage}{0.48\textwidth}
-\centering
-\includegraphics[width=0.95\linewidth,height=0.24\textheight,keepaspectratio]{figures/17_mahalanobis_conformal_relation.png}
+
+\vspace{0.6cm}
+
+\includegraphics[width=0.96\textwidth,height=0.32\textheight,keepaspectratio]{figures/17_mahalanobis_conformal_relation.png}
 \caption{Relationship between high-dimensional feature geometry (Mahalanobis out-of-distribution distance) and predictive uncertainty (95\% conformal prediction interval width) for the 410 range-bounded BLL generalization sources. Left panel: Scatter plot of the 95\% conformal prediction interval width vs.\ the Mahalanobis OOD score. Points are color-coded by their reliability grades (Grade A: green, Grade B: orange, Grade C: red), and the navy dashed line shows the linear regression trendline. Right panel: Boxplot distributions of the 95\% conformal prediction interval width grouped by their reliability grades, illustrating the statistical alignment between geometric extrapolation and predictive uncertainty.}
 \label{fig:mahalanobis_conformal}
-\end{minipage}
 \end{figure*}
 
 

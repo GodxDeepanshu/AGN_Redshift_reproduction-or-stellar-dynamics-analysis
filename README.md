@@ -149,8 +149,7 @@ The script prints real-time assertions verifying that all sample sizes, correlat
 | **Table 5** | Independent 15% untouched lockbox test evaluation ($N=198$) with 95% bootstrap CIs | [`results/tables/lockbox_metrics_with_ci.csv`](results/tables/lockbox_metrics_with_ci.csv) |
 | **Table 6** | Comparison of stacking meta-learners | [`results/tables/stacking_comparison.csv`](results/tables/stacking_comparison.csv) |
 | **Table 7** | Post-processing calibration comparison (Isotonic champion) | [`results/tables/calibration_comparison.csv`](results/tables/calibration_comparison.csv) |
-| **Table 8** | Empirical conformal prediction validation (95.09% coverage) | [`results/tables/conformal_validation.csv`](results/tables/conformal_validation.csv) |
-| **Table 9** | Generalization catalog preview for first 12 unmeasured BLLs | [`results/tables/predictions_catalog_preview.csv`](results/tables/predictions_catalog_preview.csv) |
+| **Table 9** | Generalization predictions for all 410 unmeasured BLLs (Machine-Readable Format) | [`table9_machine_readable.mrt`](table9_machine_readable.mrt), [`table9_machine_readable.csv`](table9_machine_readable.csv), [`results/tables/predictions_catalog_preview.csv`](results/tables/predictions_catalog_preview.csv) |
 
 ---
 
